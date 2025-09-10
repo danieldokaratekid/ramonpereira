@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramon Pereira - Psicólogo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #38b2ac 0%, #2c7a7b 50%, #319795 100%);
+        }
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .chatbot-toggle {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(56, 178, 172, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(56, 178, 172, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(56, 178, 172, 0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="gradient-bg text-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-brain text-3xl"></i>
+                    <h1 class="text-2xl font-bold">Ramon Pereira Psicólogo</h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#sobre" class="hover:text-blue-100 transition">Sobre</a>
+                    <a href="#especialidades" class="hover:text-blue-100 transition">Especialidades</a>
+                    <a href="#videos" class="hover:text-blue-100 transition">Vídeos</a>
+                    <a href="#atendimento" class="hover:text-blue-100 transition">Atendimento</a>
+                </nav>
+                <button class="md:hidden text-2xl" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div class="md:hidden hidden mt-4 pb-2" id="mobile-menu">
+                <a href="#sobre" class="block py-2 hover:text-blue-100 transition">Sobre</a>
+                <a href="#especialidades" class="block py-2 hover:text-blue-100 transition">Especialidades</a>
+                <a href="#videos" class="block py-2 hover:text-blue-100 transition">Vídeos</a>
+                <a href="#atendimento" class="hover:text-blue-100 transition">Atendimento</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Seja Bem Vindo Sou Ramon Pereira Psicológo Especializado Em Psicanálise</h2>
+                <p class="text-xl mb-8">Acompanhamento Psicológico personalizado para ajudar você a encontrar equilíbrio e bem-estar.</p>
+            </div>
+            <div class="md:w-1/2 flex justify-center fade-in">
+        <video class="video"id="meuVideo" width="640" height="360" controls> <source src="video/invideo-ai-720 Warm Welcome for New Patients 2025-06-23.mp4" type="video/mp4">
+        <script>
+    const video = document.getElementById("meuVideo");
+    video.loop = true; // Ativa o loop
+    video.play(); // Inicia o vídeo
+     </script>
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-teal-800 mb-4">Psicológo Ramon Pereira</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <img src="img/ramon.PNG" alt="Ramon Pereira" class="rounded-full w-64 h-64 object-cover border-4 border-teal-500 shadow-lg">
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <div class="text-blue-800 mb-3">
+                       <div class="text-center mb-16">Psicanalista(Psicanálise)</h2>
+                         <div class="text-center mb-16">CRP:19/003478</div>
+                        </div>
+                    <p class="text-lg text-gray-700 mb-6"> Sou Ramon Pereira psicológo e psicanalista, e atendo exclusivamente no ramo virtual. E aqui você acaba de encontrar o seu espaço de segurança, acolhimento e principalmente livre de julgamento.Muitas das vezes você quer sentir que foi devidamente escutado(a).Por meio da psicoterapia eu irei te ajudar a se desvincilhar-se das amarras que te prendem aliviando seu sofrimento psíquico.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-teal-50 text-teal-800 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-location-dot"></i> Aracaju-Se 
+                        </div>
+                        <div class="bg-blue-50 text-blue-800 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-graduation-cap mr-2"></i> Especialista em psicanálise
+                        </div>
+                        <div class="bg-green-50 text-green-800 px-4 py-2 rounded-full flex items-center">
+                            <i class="fas fa-computer mr-2"></i> Atendimento online por 24 horas 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="especialidades" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-teal-800 mb-4">Especialidades Oferecidas</h2>
+                <div class="w-24 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Specialty Cards -->
+                <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 specialty-card">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 mb-4">
+                        <i class="fa-solid fa-face-sad-cry"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Depressão</h3>
+                    <p class="text-gray-600">Tratamento para sintomas como tristeza persistente, perda de interesse e alterações no sono e apetite.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 specialty-card">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-800 mb-4">
+                        <i class="fas fa-heartbeat text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Ansiedade</h3>
+                    <p class="text-gray-600">Ajuda para transtornos de ansiedade, ataques de pânico, fobias e preocupação excessiva.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 specialty-card">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 mb-4">
+                   <i class="fa-solid fa-gun"></i>                   
+                        </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Violência</h3>
+                    <p class="text-gray-600">Terapia para quem sofre de violência seja verbal ou física.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 specialty-card">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-800 mb-4">
+                        <i class="fas fa-child text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Toc(Transtorno Obsessivo-compulsivo)</h3>
+                    <p class="text-gray-600">Estratégias para lidar com o TOC em crianças e adultos.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 specialty-card">
+                    <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-800 mb-4">
+                        <i class="fa-solid fa-face-smile"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Transtorno de humor</h3>
+                    <p class="text-gray-600">Terapia cognitivo-comportamental para regular o humor </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md transition duration-300 specialty-card">
+                    <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-800 mb-4">
+                        <i class="fas fa-utensils text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-800 mb-3">Transtornos Alimentares</h3>
+                    <p class="text-gray-600">Tratamento para anorexia, bulimia, compulsão alimentar e distorção da imagem corporal.</p>
+                </div>
+            </div>
+            
+            <!-- Full List Button -->
+            <div class="text-center mt-12">
+                <button id="showAllBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Ver todas as especialidades
+                </button>
+            </div>
+            
+            <!-- Full List (Hidden by default) -->
+            <div id="fullSpecialtiesList" class="hidden mt-12 bg-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-bold text-blue-800 mb-6 text-center">Lista Completa de Especialidades</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Síndrome do pânico</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>TAB (Transtorno Afetivo Bipolar)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Estresse pós-traumático (TEPT)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Fobias específicas</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Transtorno de pânico</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Timidez, vergonha e insegurança</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Transtorno de ansiedade social</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Desenvolvimento pessoal</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Traição</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Divorcío</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Aborto</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Problemas no casamento</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Cirúrgia bariátrica</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Compulsões</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Conflitos familiares</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Alienação Parental</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Uso de drogas</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Dependência de álcool</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Incertezas e insatisfações</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Desenvolvimento pessoal</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Conflitos na escola</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Bullying</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Estresse</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Burnout</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Tept(estresse pós traumático)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Acidente de trânsito</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Luto e morte</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Deficiência física e intelectual</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Psicologia oncológica(câncer)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Questões raciais </span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Pensamento de morte</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Suícidio</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Transtorno de conduta</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Transtorno psicótico</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Transtorno de personalidade antissocial</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Esquizofrênia</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Dependência tecnológica</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Jogo patólogico(vício em jogos)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Ciúmes Patológico</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Delírio de ciúmes</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Baixa auto-estima, inseguranças, vergonhas e desesperanças</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Sentimento de "vazio"</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Manias e rituais</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Transtorno específico da aprendizagem</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Transtornos relacionados a substâncias</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Dependência química</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Abuso de álcool</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Abuso de drogas</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Tabagismo</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Bordline</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Jogo patológico (vício em jogos)</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Transtornos de conduta</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Transtornos sexuais</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                        <span>Disfunções sexuais</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-teal-800 mb-4">Vídeos Relaxantes</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Assista a estes vídeos para ajudar no relaxamento e redução do estresse.</p>
+                <div class="w-24 h-1 bg-blue-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="video-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative pb-[56.25%]">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="video/Design sem nome.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-teal-800 mb-2">Som de Mar Pra Relaxar</h3>
+                        <p class="text-gray-600">10 minutos de som mar para acalmar a mente e reduzir a ansiedade.</p>
+                    </div>
+                </div>
+                <div class="video-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative pb-[56.25%]">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="video/Design sem nome (1).mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-teal-800 mb-2">Sons de chuva</h3>
+                        <p class="text-gray-600">Para indução de sono e paz</p>
+                    </div>
+                </div>
+                <div class="video-card bg-white rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="relative pb-[56.25%]">
+                        <iframe class="absolute top-0 left-0 w-full h-full" src="video/Design sem nome (2).mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg text-teal-800 mb-2">Som relaxamente para acalmar a mente</h3>
+                        <p class="text-gray-600">10 minutos de musica relaxante para alivio de ansiedade e estresse</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="atendimento" class="py-20 bg-white">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Atendimento Section -->
+    <section id="atendimento" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16 fade-in">
+            <h2 class="text-3xl font-bold text-teal-800 mb-4">Atendimento Online 24 horas</h2>
+            <div class="w-24 h-1 bg-indigo-500 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                Psicoterapia realizada através de plataformas digitais seguras, proporcionando conveniência e acessibilidade.Além de propocionar a mesma qualidade de um atendimento presencial
+            </p>
+        </div>
+            <!-- Modalidade 1 -->
+            <div class="service-card bg-white rounded-xl shadow-md overflow-hidden fade-in hover:shadow-lg">
+                <div class="p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-full mr-4">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Informações de Contato e Valores -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden fade-in max-w-4xl mx-auto p-8">
+            <div class="text-center">
+                <h3 class="text-3xl font-bold text-teal-800 mb-4">Valores e Atendimento Social</h3>    
+                <div class="grid md:grid-cols-2 gap-8 mb-8">
+                    <div class="bg-indigo-50 p-6 rounded-lg">
+                        <h4 class="text-xl font-semibold text-indigo-700 mb-4">Valores Regulares</h4>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex justify-between">
+                                <span>Atendimento Online</span>
+                                <span class="font-medium">R$ 250/sessão</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-green-50 p-6 rounded-lg border-2 border-green-200">
+                        <h4 class="text-xl font-semibold text-green-700 mb-4">Preço Social*</h4>
+                        <p class="text-gray-600 mb-4">
+                            Vagas limitadas para atendimento com valor social acessível.
+                        </p>
+                        <div class="bg-green-100 p-3 rounded-lg">
+                            <p class="text-green-800 font-medium">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                Valores a partir de R$ 80/sessão, conforme análise
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-indigo-700 text-white p-6 rounded-lg">
+                    <h4 class="text-xl font-semibold mb-4">Como agendar?</h4>
+                    <p class="mb-4 text-indigo-100">
+                        Entre em contato por WhatsApp ou e-mail para verificar disponibilidade e agendar sua sessão.
+                    </p>
+                    <a href="https://wa.me/7999408222" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Agende pelo WhatsApp
+                     </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('fa-chevron-down');
+                icon.classList.toggle('fa-chevron-up');
+            });
+        });
+        
+        
+        // Add fade-in animation to elements when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+</div>
+</section>
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fas fa-brain text-3xl"></i>
+                        <h2 class="text-2xl font-bold">Ramon Pereira</h2>
+                    </div>
+                    <p class="max-w-xs">Psicólogo especializado em ajudar pessoas a alcançarem bem-estar emocional e qualidade de vida.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Links</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#sobre" class="hover:text-blue-100 transition">Sobre</a></li>
+                            <li><a href="#especialidades" class="hover:text-blue-100 transition">Especialidades</a></li>
+                            <li><a href="#videos" class="hover:text-blue-100 transition">Vídeos</a></li>
+                            <li><a href="#atendimento" class="hover:text-blue-100 transition">Atendimento</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Contato</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fab fa-whatsapp mr-2"></i> (79) 9940-8222
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-envelope mr-2"></i> ramonpereirapsicologo@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-4">Redes Sociais</h3>
+                        <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/ramonpereirapsicologo/"
+                            class="text-2xl hover:text-blue-100 transition">
+                                <i class="fab fa-instagram">
+                            </i></a>
+                            <a href="#" class="text-2xl hover:text-blue-100 transition"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-teal-300 mt-12 pt-8 text-center">
+                <p>&copy; 2025 Ramon Pereira Psicólogo. Todos os direitos reservados.</p>
+                <p class="mt-2 text-sm text-teal-200">CRP:19/003478</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/7999408222" target="_blank" class="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg transition z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Chatbot -->
+    <div class="fixed bottom-24 right-8 z-50" >
+        <!-- Chatbot Toggle -->
+        <button id="chatbot-toggle" class="chatbot-toggle bg-teal-600 hover:bg-teal-700 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-lg transition">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        
+        <!-- Chatbot Container (hidden by default) -->
+        <div id="chatbot-container" class="hidden w-80 bg-white rounded-lg shadow-xl overflow-hidden absolute bottom-20 right-0">
+            <div class="bg-teal-600 text-white p-4 flex justify-between items-center">
+              <h3 class="font-bold">Chatbot de auto atendimento</h3>
+                <button id="chatbot-close" class="text-white hover:text-teal-200">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="chatbot-messages" class="h-64 p-4 overflow-y-auto bg-gray-50">
+                <div class="mb-4">
+                    <div class="bg-teal-100 text-teal-800 rounded-lg p-3 max-w-xs">
+                        Olá! Sou o assistente de auto atendimento do site. Como posso te ajudar hoje? Lembrando que só posso responder perguntas relacionados ao atendimento do site. Então por gentileza se limite a me perguntar sobre os horários, como funciona nosso atendimento e como marcar consultas
+                    </div>
+                </div>
+            </div>
+            <div class="p-4 border-t">
+                <div class="flex">
+                    <input type="text" id="chatbot-input" placeholder="Digite sua mensagem..." class="flex-grow px-4 py-2 border rounded-l-lg focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    <button id="chatbot-send" class="bg-teal-600 hover:bg-teal-700 text-white px-4 py-2 rounded-r-lg transition">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="mt-2 text-xs text-gray-500">
+                    Respostas automáticas - para atendimento personalizado, entre em contato diretamente.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Chatbot functionality
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotSend = document.getElementById('chatbot-send');
+
+        // Toggle chatbot visibility
+        chatbotToggle.addEventListener('click', function() {
+            chatbotContainer.classList.toggle('hidden');
+        });
+
+        // Close chatbot
+        chatbotClose.addEventListener('click', function() {
+            chatbotContainer.classList.add('hidden');
+        });
+
+        // Chatbot responses
+        const responses = {
+            "oi": "Olá! Como posso te ajudar hoje?",
+            "olá": "Olá! sou chatbot do site Como posso te ajudar hoje?",
+            "como faço para marcar uma consulta?": "O atendimento é 24 horas por dia. Por gentileza se quiser marcar um horário marque exclusivamente no whatsapp no canto inferior direito😉",
+            "como marcar uma consulta?": "O atendimento é 24 horas por dia. Por gentileza se quiser marcar um horário marque exclusivamente no whatsapp no canto inferior direito😉",
+            "gostaria de marcar uma consulta": "O atendimento é 24 horas por dia. Por gentileza se quiser marcar um horário marque exclusivamente no whatsapp no canto inferior direito😉",
+            "quero marcar uma consulta": "O atendimento é 24 horas por dia. Por gentileza se quiser marcar um horário marque exclusivamente no whatsapp no canto inferior direito😉",
+            "gostaria de marcar uma consulta com doutor ramon": "O atendimento é 24 horas por dia. Por gentileza se quiser marcar um horário marque exclusivamente no whatsapp no canto inferior direito😉",
+            "marcação de consulta": "O atendimento é 24 horas por dia. Por gentileza se quiser marcar um horário marque exclusivamente no whatsapp no canto inferior direito😉",
+            "marcações de consulta": "O atendimento é 24 horas por dia. Por gentileza se quiser marcar um horário marque exclusivamente no whatsapp no canto inferior direito😉",
+            "como faço para marcar consultas?": "O atendimento é 24 horas por dia. Por gentileza se quiser marcar um horário marque exclusivamente no whatsapp no canto inferior direito😉",
+            "gostaria de marca uma consulta": "O atendimento é 24 horas por dia. Por gentileza se quiser marcar um horário marque exclusivamente no whatsapp no canto inferior direito😉",
+            "valor": "Os valores das consultas variam conforme o tipo de atendimento.",
+            "valores":"Os valores das consultas variam conforme o tipo de atendimento",
+            "Quanto é o valor da sessão?":" o valor das consultas variam conforme o tipo de atendimento",
+            "Quanto Ramon Pereira cobra por sessão?":"o preço das consultas das consultas variam conforme o tipo de atendimento",
+            "whatsapp": "O WhatsApp de Dr Ramon é (79) 799940-8222. Você pode clicar no botão verde no canto inferior direito para conversar diretamente.😉",
+            "agendar": "Para agendar uma consulta, você pode enviar mensagem pelo WhatsApp no botão verde ou ligar para (79)9940-8222",
+            "atendimento": "Nossa principal modalidade de atendimento , é o atendimento online por videoconferência com a mesma qualidade de uma consulta presencial.Se quiser marcar o atendimento com o psicológo Ramon Pereira por favor fale diretamente com ele no botão inferior direito da tela no ícone do whatsapp ",
+            "presencial": "Não trabalhamos com atendimento presencial somente online",
+            "obrigado": "Por nada! Estou aqui para ajudar. Se precisar de mais alguma coisa, é só perguntar.",
+            "obrigada": "Por nada! Estou aqui para ajudar. Se precisar de mais alguma coisa, é só perguntar.",
+            "Vocês atendem quem tem depressão?":"Sim atendemos e temos diversas outras especialidades é só verificar a lista de especialidades de Ramon Pereira que o senhor(a) verá todas as especialidades",
+            "Quais são as formas de atendimento?":"Atendemos de maneira online com diversas especialidades como:bordline,depressão e ansiedade",
+            "Quais os horário de atendimento?":"Os horários de atendimento variam muito com a demanda do dia.Portanto é difícil estimar horários específicos para o atendimento",
+            "Quero marcar uma consulta presencial":"Não atendemos presencial só atendemos on-line",
+            "Como faço para marcar uma consulta?":"É só falar diretamente com Ramon pelo número de whatsapp (79) 799940-8222",
+            "Qualquer um pode fazer a terapia?":"Sim! É verdade qualquer um consegue fazer a terapia pois ela é pra todo que querem se conhecer melhor",
+            "Como funciona a terapia?":"O processo terapêutico faz você se conhecer melhor e conseguir resolver seus problemas diários de uma maneira muito mais fácil e produtiva",
+            "Quais são as especialidades de Ramon Pereira":"Algumas das especialidades de Ramon Pereira são: Tratamento para bordline,Tratamento para depressão, Tratamento para ansiedade, Tratamento para transtornos alimentares, Tratamento para quem sofre tipos de violência e tem diversas outras especialidades.Por favor verifica a lista para ver se a especialidade que deseja é atendida pelo psicológo Ramon Pereira",
+            "Vocês atendem quem tem ansiedade?":"Sim atendemos e temos diversas outras especialidades é só verificar a lista de especialidades de Ramon Pereira que o senhor(a) verá todas as especialidades",
+            "Vocês atendem quem tem transtornos alimentares?":"Sim atendemos e temos diversas outras especialidades é só verificar a lista de especialidades de Ramon Pereira que o senhor(a) verá todas as especialidades",
+            "Vocês atendem quem tem esquizofrenia?":"Sim atendemos e temos diversas outras especialidades é só verificar a lista de especialidades de Ramon Pereira que o senhor(a) verá todas as especialidades",
+            "Vocês atendem quem tem toc?":"Sim atendemos e temos diversas outras especialidades é só verificar a lista de especialidades de Ramon Pereira que o senhor(a) verá todas as especialidades",
+            "Vocês atendem quem tem transtorno bipolar?":"Sim atendemos e temos diversas outras especialidades é só verificar a lista de especialidades de Ramon Pereira que o senhor(a) verá todas as especialidades",
+            "Quais casos ele trata":"Ramon Pereira tem um amplo repertório de terapias e atende diversos especialidades como:depressão,ansiedade e burnout.Caso deseje mais informações é só verificar a lista de especialidades de Ramon Pereira que o senhor(a) verá todas as especialidades",
+             "Como faço para marcar uma consulta?":""
+           };
+        // Default responses""
+        const defaultResponses = [
+            "Peço desculpas por não conseguir responder essa pergunta.Por favor verifique se digitou corretamente a pergunta e se você está me perguntando sobre o atendimento do site e não outras questões.Sugiro também que verifique na lista se possuimos o serviço que o senhor(a) necessita.Se preferir recomendo esclarecer suas dúvidas falando diretamente com o psicológo Ramon Pereira através através do número (79) 799940-8222",
+        ];
+
+        // Send message function
+        function sendMessage() {
+            const message = chatbotInput.value.trim().toLowerCase();
+            if (message === '') return;
+
+            // Add user message
+            addMessage(message, 'user');
+            chatbotInput.value = '';
+
+            // Bot response
+            setTimeout(() => {
+                let response = "Desculpe, não entendi. Você pode reformular sua pergunta?";
+                
+                // Check for matching responses
+                for (const key in responses) {
+                    if (message.includes(key)) {
+                        response = responses[key];
+                        break;
+                    }
+                }
+
+                // If no match, use random default
+                if (response === "Desculpe, não entendi. Você pode reformular sua pergunta?") {
+                    response = defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+                }
+
+                addMessage(response, 'bot');
+            }, 800);
+        }
+
+        // Add message to chat
+        function addMessage(text, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('mb-4', 'fade-in');
+            
+            if (sender === 'user') {
+                messageDiv.classList.add('flex', 'justify-end');
+                messageDiv.innerHTML = `
+                    <div class="bg-blue-100 text-blue-800 rounded-lg p-3 max-w-xs">
+                        ${text}
+                    </div>
+                `;
+            } else {
+                messageDiv.classList.add('flex', 'justify-start');
+                messageDiv.innerHTML = `
+                    <div class="bg-teal-100 text-teal-800 rounded-lg p-3 max-w-xs">
+                        ${text}
+                    </div>
+                `;
+            }
+            
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+
+        // Event listeners for chatbot
+        chatbotSend.addEventListener('click', sendMessage);
+        chatbotInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+</body> <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Show all specialties
+        document.getElementById('showAllBtn').addEventListener('click', function() {
+            const fullList = document.getElementById('fullSpecialtiesList');
+            fullList.classList.toggle('hidden');
+            this.textContent = fullList.classList.contains('hidden') ? 'Ver todas as especialidades' : 'Ocultar lista';
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in animation when elements come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    fadeInObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        fadeElements.forEach(element => {
+            element.classList.add('opacity-0');
+            fadeInObserver.observe(element);
+        });
+    </script>
+</html>
